@@ -12,7 +12,8 @@ object Client extends MainFrame with ServerUtils with App {
   preferredSize = new Dimension(500, 500) //builds GUI to click and send and close buttons
 
   override val serverPort: Int = 8080
-  val socket = createConnection("localhost", 8080)
+  val socket = createConnection("localhost", serverPort)
+
   val inputStream = readFromStream(socket)
   val outputStream = getPrintStream(socket)
 
