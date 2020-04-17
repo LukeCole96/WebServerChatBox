@@ -5,6 +5,7 @@ I have taken a functional programming approach where most things are immutable, 
 This is a Scala based solution, to run, you require:
 -	java version "1.8.0_221"
 -	Java(TM) SE Runtime Environment (build 1.8.0_221-b11)
+
 In scala, there is no main method like Java. All applications must run from an Object that extends App (which runs the application in the main thread).
 Ensure you have the latest JDK and JRE as seen above, as well as the latest version of Scala. The application requires the JVM as it requires both the JVM’s compiler and runtime environment. Scala, like Java runs on the JVM and is compiled to Java byte code. Both Classes, extend App which is Scala’s equivalent of the main method and allows you to run that inside its own runtime environment, only, Scala treats it like an Object. Both applications run in their own runtime or can be both instantiated in one common ‘run object’ that extends App and instantiates both objects in the same runtime, but for this practice, it was best to go for the micro-service approach.
 
